@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript</title>
+</head>
+<body onload="">
+    <h2 id="heading"></h2> javascript examples </h2>
+    <input id="userinput" placeholder="name">
+    <!-- <input onkeyup="myfunction2()"> -->
+    <button onclick="myfunction3()"> click me! </button>
+
+    <script> 
+    // define javascript here.
+    function myfunction3(){
+        let name= document.getElementById("userinput").value;
+        console.log("selected value",name )
+        
+        if(name.length<3){
+            alert("error: name length cannot be less than 3")
+        }else if (name.length>10){
+            alert ("error: name length cannot be greater than 10")
+        }else{
+            // only numeric value applied
+            for(let i=0;i< name.length; i++){
+                let digit= parseInt(name[i]);
+                if(!isNaN(digit)){
+                    alert("text should only have numbers");}
+                    else{
+                        console.log("looks good")
+                    }
+                }
+                console.log("validation complete")
+            }
+        }
+
+        // let header = document.getElementById("heading");
+        // header.innerHTML ="welcome" + name;
+
+    
+    function myfunction2(){
+        console.log("second function!@@")
+    }
+    function myfunction(){
+        // function body
+       // alert("javascript function!!!")
+       let name = prompt("enter you name.");
+       console.log("name is:",name)
+     let myvar =confirm("are you sure?");
+     console.log("value of myvar is:");
+     console.log(myvar)
+    }
+    </script>
+    
+</body>
+</html>
